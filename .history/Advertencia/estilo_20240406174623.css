@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100..900&display=swap');
+
+:root {
+    --color-neutral-0: #0e0c0c;
+    --color-neutral-10: #171717;
+    --color-neutral-30: #a8a29e;
+    --color-neutral-40: #f5f5f5;
+
+}
+
+* {
+    margin: 0PX;
+    padding: 0PX;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+
+main {
+    height: auto;
+}
+main .titu{
+    text-align: center;
+}
+
+P {
+    margin: 15px 0px 15px 0px;
+}
+
+header {
+    background-color: #FFF212;
+    height: 115px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+}
+
+header main {
+    background-color: #FFF212;
+    width: 900px;
+    margin: auto;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    height: 90px;
+
+}
+
+header main h1 {
+    margin-left: 67px;
+    font-size: 1.8em;
+    padding-top: 5px;
+    margin-top: 0px;
+}
+
+header main img {
+    width: 100px;
+    margin-top: -40px;
+    margin-left: -35px;
+}
+
+header main p {
+    margin-left: 73px;
+    margin-top: -64px;
+    font-size: 1.4em;
+}
+
+.menu section {
+    background-color: white;
+    width: 900px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    padding: 10px;
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    border-radius: 10px 10px 10px 10px;
+    list-style-position: inside;
+    font-size: 14px;
+}
+.menu section p{
+    text-align: left;
+    margin-top: 5px;
+}
+
+.menu h1 {
+    text-align: center;
+    margin: 20px;
+}
+
+.menu .tit {
+    margin-top: 10px;
+}
+
+.menu ul {
+    margin-top: 40px;
+}
+
+.menu a {
+    color: rgba(0, 0, 0, 0.582);
+    text-decoration: none;
+    cursor: text;
+    font-size: 16px;
+    color: black;
+    font-weight: normal;
+}
+
+.menu p {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.menu .paragrafo{
+    text-align: center;
+}
+
+.menu #marg{
+    margin-top: 20px;
+}
+
+.menu input {
+    margin-top: 20px;
+    border: none;
+    padding: 10px;
+    width: 90px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.menu input:hover {
+    cursor: pointer;
+    background-color: #0000008a;
+    font-weight: bold;
+}
+.menu > section > .box {
+    text-align: center;
+    display: flexbox;
+    border-color: black;
+}
+
+@media screen and (max-width: 976px) {
+    .menu{
+        margin: auto;
+    }
+    .menu section{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .menu a{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 375px) {
+    header main{
+        width: 300px;
+    }
+    header{
+        width: 375px;
+    }
+}
