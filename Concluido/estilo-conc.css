@@ -51,8 +51,6 @@ P {
     color: white;
 }
 .btnc:hover{
-    padding: 10px;
-    margin-top: 50px;
     border-radius: 10px;
     font-weight: bold;
     background-color: rgba(0, 0, 0, 0.651);

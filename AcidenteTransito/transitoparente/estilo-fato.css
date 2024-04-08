@@ -68,6 +68,13 @@ button{
     background-color:black;
     color:white;
     margin: 5px auto;
+    border-color: transparent;
+}
+
+button:hover{
+    background-color:rgba(0, 0, 0, 0.500);
+    cursor: pointer;
+    
 }
 
 

@@ -29,6 +29,10 @@ footer {
     text-decoration: none;
     color: white;
 }
+.footer-link h3{
+    text-decoration: none;
+    color: white;
+}
 
 .footer-links {
     text-decoration: none;
@@ -88,7 +92,6 @@ footer {
     flex-direction: column;
     gap: 0.75rem;
     list-style: none;
-
 }
 
 .footer-link:hover{
@@ -119,7 +122,7 @@ footer {
 #input_group {
     display: flex;
     align-items: center;
-    background-color: 4px;
+    background-color: 4PX;
     border-radius: 4px;
 }
 
@@ -130,7 +133,7 @@ footer {
     border-top: 2px solid white;
     border-bottom: 2px solid white;
     border-left: 2px solid white;
-    border-radius: 4px;
+    border-radius: 4px;    
 }
 
 #input_group button {
@@ -185,7 +188,6 @@ footer {
     }
     #footer_subscribe h3{
         color:white;
-        
     }
 
     #footer_subscribe p {
@@ -244,7 +246,7 @@ footer {
         left: 0;
         width: 100%;
     }
-}   
+   
     .footer-list {
         color:black;
         margin-top: 20px;
@@ -293,6 +295,7 @@ footer {
     #footer_contacts h1{
         margin-left: 13px;
     }
+}
 
 @media screen and (max-width: 413px) {
     #footer_content{
