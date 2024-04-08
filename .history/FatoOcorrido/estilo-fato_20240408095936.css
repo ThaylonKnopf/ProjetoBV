@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100..900&display=swap');
+
+:root {
+    --color-neutral-0: #0e0c0c;
+    --color-neutral-10: #171717;
+    --color-neutral-30: #a8a29e;
+    --color-neutral-40: #f5f5f5;
+
+}
+
+* {
+    margin: 0PX;
+    padding: 0PX;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+
+main {
+    height: auto;
+}
+P {
+    margin: 15px 0px 15px 0px;
+}
+
+.header-tit{
+    margin: auto;
+    background-color:gray;
+    width: 900px;
+}
+
+.menu section {
+    background-color: white;
+    width: 900px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    padding: 10px;
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    border-radius: 10px 10px 10px 10px;
+    list-style-position: inside;
+    font-size: 14px;
+}
+.menu section p{
+    text-align: left;
+    margin-top: 5px;
+}
+
+.menu a {
+    color: rgba(0, 0, 0, 0.582);
+    text-decoration: none;
+    cursor: text;
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+}
+
+.voltar{
+    display: flex;
+    margin-left:  48%;
+}
+
+.voltar:hover {
+    cursor: pointer;
+    background-color: #0000008a;
+    font-weight: bold;
+}
+
+.menu .caso{
+    display: flex;
+    text-align: left;
+    margin-left: 30px;
+    margin-top: -28px;
+}
+
+.menu .foto{
+    display: flex;  
+    margin-left:0px;
+}
+
+.menu  h2 a{
+    margin-left: 10px;
+
+}
+.menu .fato p{
+    font-weight: normal;
+}
+.menu .fato h2 strong{
+    margin-left: 10px;
+}
+.menu section #outros{
+    margin-bottom: 0px;
+}
