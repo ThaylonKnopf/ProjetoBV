@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  #login-box {
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  input[type="text"], input[type="password"], button {
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+
+  button:hover{
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<div id="login-box">
+  <h2>Login</h2>
+  <form ">
+    <input type="text" id="username" placeholder="Usuário" >
+    <input type="password" id="password" placeholder="Senha" >
+    <button type="submit" id="login-button" onclick="logar()">Entrar</button>
+  </form>
+</div>
+
+<script>
+  function logar() {
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+
+    // Validação simples para usuário e senha
+    if (username === 'admin' && password === 'admin') {
+        alert('Deu certo!.')
+        location.href = "index.html";
+    } else {
+      alert('Usuário ou senha incorretos.');
+      // Aborta o envio do formulário
+    }
+  }
+</script>
+
+</body>
+</html>
