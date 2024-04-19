@@ -19,17 +19,41 @@
         </div>
         <h1>Login</h1>
         <input type="email" name="email" id="iemail" placeholder="E-mail" required>
-        <input type="password" name="senha" id="isenha" placeholder="Senha" required>
+        <input type="password" name="senha" id="isenha" placeholder="Senha"  required>
         <div id="senha-logado">
             <input type="checkbox" name="check-p" id="check">
             <label for="check">Manter-me conectado.
             </label>
             <p>Esqueceu sua <a href="#">senha</a>?</p>
         </div>
-        <a href="/index.html" id="btn-entrar"><input type="submit" value="Entrar" id="entrar"></a>
+        <input type="submit" value="Entrar" id="entrar" onclick="entrar()" class="btn-entrar">
     </div>
     <div id="imagem">
     </div>
+    <script>
+
+        function entrar() {
+            var login = document.getElementById('iemail').value
+            var senha = document.getElementById('isenha').value
+
+            if( login == 'admin' && senha == 'admin'){
+                location.assign('/index.html');
+            }else{
+                alert('E-mail ou Senha nao Conferem !')
+            }
+        }
+
+        $('#isenha').on({
+            blur: function() {
+                document.getElementById("entrar").focus()
+            } 
+            })
+
+            addEventListener('popstate', function () {
+            // Impedir que a página volte
+            history.pushState(null, '', window.location.href);
+            });
+    </script>
 </section>
 </body>
 </html>

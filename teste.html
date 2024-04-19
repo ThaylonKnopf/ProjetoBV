@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,26 +34,22 @@
 <div id="login-box">
   <h2>Login</h2>
   <form ">
-    <input type="text" id="username" placeholder="Usuário" >
-    <input type="password" id="password" placeholder="Senha" >
-    <button type="submit" id="login-button" onclick="logar()">Entrar</button>
+    <input type="text" id="usuario" placeholder="Usuário" >
+    <input type="password" id="senha" placeholder="Senha" >
+    <button class="btn-logar" onClick={logar()}; return false>Entrar</button>
   </form>
 </div>
 
 <script>
   function logar() {
-    var username = document.getElementById('username').value;
-    var password = document.getElementById('password').value;
+        var usuario = document.querySelector('#usuario').value;
 
-    // Validação simples para usuário e senha
-    if (username === 'admin' && password === 'admin') {
-        alert('Deu certo!.')
-        location.href = "index.html";
-    } else {
-      alert('Usuário ou senha incorretos.');
-      // Aborta o envio do formulário
+        if (usuario == 'admin') {
+            location.href = "index.html";
+        } else {
+            alert('Erro ao acessar, verifique senha e usuário')
+        }
     }
-  }
 </script>
 
 </body>
