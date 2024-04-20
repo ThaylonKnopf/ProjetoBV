@@ -38,21 +38,25 @@
 
             if( login == 'admin' && senha == 'admin'){
                 location.assign('/index.html');
-            }else{
-                alert('E-mail ou Senha nao Conferem !')
+            }else if(login !== 'admin' && senha !== 'admin' || login =='' && senha=='') {
+                document.getElementById('iemail').style.border='1px solid red';
+                document.getElementById('isenha').style.border='1px solid red';
+                document.getElementById('iemail').innerText('Senha Incorreta');
+                document.getElementById('isenha').innerText('Senha Incorreta');
+            }
+            else if(login != 'admin') {
+                document.getElementById('iemail').style.border='1px solid red'
+                document.getElementById('iemail').innerText('Senha Incorreta')
+                document.getElementById('isenha').innerText('Senha Incorreta')
+            }
+            else if(senha != 'admin') {
+                document.getElementById('isenha').style.border='1px solid red';
+                document.getElementById('isenha').innerText('Senha Incorreta')
+            }
+            else{
+                alert('Login e senha não conferem !')
             }
         }
-
-        $('#isenha').on({
-            blur: function() {
-                document.getElementById("entrar").focus()
-            } 
-            })
-
-            addEventListener('popstate', function () {
-            // Impedir que a página volte
-            history.pushState(null, '', window.location.href);
-            });
     </script>
 </section>
 </body>
