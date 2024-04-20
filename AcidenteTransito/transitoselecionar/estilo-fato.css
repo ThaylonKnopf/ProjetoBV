@@ -18,6 +18,15 @@
     letter-spacing: 1px;
 }
 
+::-webkit-scrollbar{
+    overflow: hidden;
+}
+
+
+body,html{
+    height: 100vh;
+}
+
 P {
     margin: 15px 0px 15px 0px;
 }
@@ -25,7 +34,7 @@ P {
     margin:auto;
     max-width: 900px;
     text-align: center;
-
+    height: 60vh;
 }
 .op{
     max-width: 650px;
