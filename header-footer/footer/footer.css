@@ -18,14 +18,22 @@
     letter-spacing: 1px;
 }
 
-html,body{
+html {
     height: 100%;
-}
-
+  }
+  body {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr auto;
+  }
+  .footer {
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  
 footer {
     position: relative;
-    bottom: 0;
-    left: 0%;
+    rel
     color: var(--color-neutral-40);
 }
 
@@ -49,6 +57,7 @@ footer {
     grid-template-columns: repeat(4, 1fr);
     padding: 1rem 3rem;
     max-height: 205px;
+    height: 150px;
 
 }
 

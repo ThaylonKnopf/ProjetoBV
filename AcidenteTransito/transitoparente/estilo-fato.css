@@ -53,13 +53,21 @@ h2{
 }
 
 .main-botao{
-    max-width: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     margin: 0px auto 20px auto;
 }
 
 .continuar{
-    max-width: 155px;
-    margin: auto;
+    .prox{
+        width: 100px;
+    }
+    
+    .voltar{
+        width: 100px;
+    }
 }
 
 button{
@@ -67,7 +75,7 @@ button{
     border-radius:8px;
     background-color:black;
     color:white;
-    margin: 5px auto;
+    margin: 5px 10px 0px 10px ;
     border-color: transparent;
 }
 

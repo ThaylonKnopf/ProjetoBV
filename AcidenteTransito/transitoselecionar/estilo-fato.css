@@ -31,10 +31,13 @@ P {
     margin: 15px 0px 15px 0px;
 }
 .menuh1{
-    margin:auto;
+    position: absolute;
+    top: 40%;    
+    left: 50%;
+    transform: translate(-50%,-50%);
+
     max-width: 900px;
     text-align: center;
-    height: 60vh;
 }
 .op{
     max-width: 650px;
