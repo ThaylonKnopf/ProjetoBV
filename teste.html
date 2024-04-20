@@ -1,56 +1,39 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-  }
-  #login-box {
-    width: 300px;
-    margin: 100px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  input[type="text"], input[type="password"], button {
-    width: 100%;
-    margin: 5px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    box-sizing: border-box;
-  }
-
-  button:hover{
-    cursor: pointer;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 <body>
-
-<div id="login-box">
-  <h2>Login</h2>
-  <form ">
-    <input type="text" id="usuario" placeholder="Usuário" >
-    <input type="password" id="senha" placeholder="Senha" >
-    <button class="btn-logar" onClick={logar()}; return false>Entrar</button>
-  </form>
-</div>
-
-<script>
-  function logar() {
-        var usuario = document.querySelector('#usuario').value;
-
-        if (usuario == 'admin') {
-            location.href = "index.html";
-        } else {
-            alert('Erro ao acessar, verifique senha e usuário')
-        }
-    }
-</script>
-
+  
 </body>
 </html>
+
+<script>function mostrarMensagemTemporaria(mensagem, tempo) {
+  // Cria um elemento <div> para a mensagem temporária
+  var tempMessage = document.createElement('div');
+  tempMessage.textContent = mensagem;
+  tempMessage.style.position = 'fixed';
+  tempMessage.style.top = '5%';
+  tempMessage.style.left = '50%';
+  tempMessage.style.transform = 'translate(-50%, -50%)';
+  tempMessage.style.backgroundColor = '#f0f0f0';
+  tempMessage.style.padding = '10px 20px';
+  tempMessage.style.border = '1px solid #ccc';
+  tempMessage.style.borderRadius = '5px';
+  tempMessage.style.boxShadow = '0px 0px 10px rgba(0, 0, 0, 0.2)';
+  tempMessage.style.zIndex = '1000';
+
+  // Adiciona o elemento à página
+  document.body.appendChild(tempMessage);
+
+  // Remove a mensagem após o tempo especificado
+  setTimeout(function() {
+      tempMessage.remove();
+  }, tempo);
+}
+
+// Exemplo de uso
+mostrarMensagemTemporaria('Esta é uma mensagem temporária!', 3000); // 3000 milissegundos = 3 segundos
+</script>

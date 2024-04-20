@@ -32,28 +32,78 @@
     </div>
     <script>
 
-        function entrar() {
-            var login = document.getElementById('iemail').value
-            var senha = document.getElementById('isenha').value
+        var style = document.createElement('style');
+                style.innerHTML = '::placeholder { color: red; }';
 
-            if( login == 'admin' && senha == 'admin'){
+        function mostrarMensagemTemporaria(mensagem, tempo) {
+  // Cria um elemento <div> para a mensagem temporária
+                var tempMessage = document.createElement('div');
+                tempMessage.textContent = mensagem;
+                tempMessage.style.position = 'fixed';
+                tempMessage.style.top = '5%';
+                tempMessage.style.left = '50%';
+                tempMessage.style.transform = 'translate(-50%, -50%)';
+                tempMessage.style.backgroundColor = '#f0f0f0';
+                tempMessage.style.padding = '10px 20px';
+                tempMessage.style.border = '1px solid #ccc';
+                tempMessage.style.borderRadius = '5px';
+                tempMessage.style.boxShadow = '0px 0px 10px rgba(0, 0, 0, 0.2)';
+                tempMessage.style.zIndex = '3000';
+
+                // Adiciona o elemento à página
+                document.body.appendChild(tempMessage);
+
+                // Remove a mensagem após o tempo especificado
+                setTimeout(function() {
+                    tempMessage.remove();
+                }, tempo);
+                }
+
+                function Log1(Log){
+                var tempLogin = document.createElement('Log')
                 location.assign('/index.html');
-            }else if(login !== 'admin' && senha !== 'admin' || login =='' && senha=='') {
-                document.getElementById('iemail').style.border='1px solid red';
-                document.getElementById('isenha').style.border='1px solid red';
-                document.getElementById('iemail').innerText('Senha Incorreta');
-                document.getElementById('isenha').innerText('Senha Incorreta');
+                setTimeout(function(Log) {
+                    Log.remove();
+                }, tempo);
             }
-            else if(login != 'admin') {
-                document.getElementById('iemail').style.border='1px solid red'
-                document.getElementById('iemail').innerText('Senha Incorreta')
-                document.getElementById('isenha').innerText('Senha Incorreta')
+                
+
+
+        // Adiciona o estilo ao cabeçalho da página
+        //document.head.appendChild(style);
+
+        function entrar() {
+            var login = document.getElementById('iemail');
+            var senha = document.getElementById('isenha');
+
+            if( login.value == 'admin' && senha.value == 'admin'){
+                mostrarMensagemTemporaria('Logado com Sucesso', 3000);
+                
+            
+            } else if(login.value != 'admin' && senha.value =='admin') {
+                login.value=''
+                senha.value=''
+                login.style.border='2.5px solid red'
+                login.placeholder = "E-mail incorreto"
+                document.head.appendChild(style);
+            
+            }else if(login.value == 'admin' && senha.value !== 'admin') {
+                isenha.value='';
+                senha.style.border='2.5px solid red';
+                senha.placeholder = "Senha incorreta";
+                document.head.appendChild(style);
+
+            }else if(login.value !== 'admin' && senha.value !== 'admin') {
+                login.value='';
+                isenha.value='';
+                login.style.border='2.5px solid red';
+                senha.style.border='2.5px solid red';
+                login.placeholder = "E-mail incorreto";
+                senha.placeholder = "Senha incorreta";
+                document.head.appendChild(style);
+           
             }
-            else if(senha != 'admin') {
-                document.getElementById('isenha').style.border='1px solid red';
-                document.getElementById('isenha').innerText('Senha Incorreta')
-            }
-            else{
+               else{
                 alert('Login e senha não conferem !')
             }
         }
