@@ -26,7 +26,11 @@
             </label>
             <p>Esqueceu sua <a href="#">senha</a>?</p>
         </div>
+<<<<<<< Updated upstream
         <input type="submit" value="Entrar" id="entrar" onclick="entrar()" class="btn-entrar">
+=======
+        <input type="submit" value="Entrar" id="entrar" onclick="Login()">
+>>>>>>> Stashed changes
     </div>
     <div id="imagem">
     </div>
@@ -137,5 +141,23 @@
         }
     </script>
 </section>
+<script>
+    function Login() {
+        var username = document.getElementById('iemail');
+        var password = document.getElementById('isenha');
+    
+        // Validação simples para usuário e senha
+        if (username.value === 'admin' && password.value === 'admin') {
+          window.location="/index.html"
+        } else if (username !== 'admin' && password !== 'admin'){
+          username.value='';
+          password.value='';
+          document.getElementById("isenha").style.border = "1px solid red";
+          document.getElementById("iemail").style.border = "1px solid red";
+          document.getElementById("isenha").Placeholder= "senha incorreta";
+
+        }
+      }
+</script>
 </body>
 </html>

@@ -29,7 +29,7 @@
                         </div>
                         <p>Esqueceu sua <a href="../redefinir -senha/redef-senha.html">senha</a>?</p>
                     </div>
-                    <a href="/index.html"><input class="botao" type="submit" value="Entrar" onsubmit="return validateLogin()"></a>
+                    <input class="botao" type="submit" value="Entrar" onsubmit="Login()">
                 </div>
                     <div id="fim">
                         <p>Ainda não tem cadastro? <a href="/Login-Cadastro/Cadastro/cadastro.html">Cadastre-se</a></p>
@@ -42,17 +42,15 @@
 </main>
 
 <script>
-    function validateLogin() {
+    function Login() {
         var username = document.getElementById('inome').value;
         var password = document.getElementById('isenha').value;
     
         // Validação simples para usuário e senha
         if (username === 'admin' && password === 'admin') {
           alert('Login bem-sucedido!');
-          return true;
         } else {
           alert('Usuário ou senha incorretos.');
-          return false;
         }
       }
 </script>

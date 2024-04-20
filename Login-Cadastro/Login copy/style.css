@@ -62,12 +62,24 @@ section{
     input{
         width: 80%;
         border-radius: 8px;
+<<<<<<< Updated upstream
         border: 1px solid rgb(0, 0, 0);
         margin: 5px auto;
+=======
+        border: 1px solid black;
+        padding: 5px;
+        font-weight: bold;
+    }
+
+    #iemail,#isenha{  
+        margin-top: 10px;
+        height: 7%;
+>>>>>>> Stashed changes
         color: black;
         font-weight: bolder;
     }
 
+<<<<<<< Updated upstream
     #iemail,#isenha{  
         margin-top: 10px;
         height: 9%;
@@ -82,6 +94,13 @@ section{
         height: 35px;
         text-decoration: none;
         justify-content: center;
+=======
+    #entrar{
+        margin-top: 10px;
+        height: 8%;
+        color: black;
+        font-weight: bolder;
+>>>>>>> Stashed changes
     }
 
     #entrar:hover{
@@ -121,7 +140,11 @@ section{
 
 #imagem{
     background-image: url(/img/fundo-img.jpg);
+<<<<<<< Updated upstream
     background-position:right center ;
+=======
+    background-position:center right;
+>>>>>>> Stashed changes
     background-size: cover;
     width: 350px;
     height: 400px;
