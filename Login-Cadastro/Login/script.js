@@ -21,6 +21,7 @@
                 function mostrarMensagemTemporaria(mensagem, tempo) {
                     // Cria um elemento <div> para a mensagem temporária
                     var tempMessage = document.createElement('div');
+                    
                     tempMessage.textContent = mensagem;
                     tempMessage.style.position = 'fixed';
                     tempMessage.style.color = 'black';
@@ -60,6 +61,8 @@
                     tempMessage.style.boxShadow = '0px 0px 10px rgba(0, 0, 0, 0.2)';
                     tempMessage.style.fontWeight = 'bolder';
                     tempMessage.style.zIndex = '3000';
+                    tempMessage.style.transform= 'transition(.3s,.3s)';
+                    tempMessage.style.transition_timing_function= 'ease' ;
 
                     // Adiciona o elemento à página
                     document.body.appendChild(tempMessage);
