@@ -1,38 +1,20 @@
-<!DOCTYPE html>
-<html lang='pt-BR'>
+                function Login() {
+                    var username = document.getElementById('iemail');
+                    var password = document.getElementById('isenha');
 
-    <head>
-        <meta charset='UTF-8'>
-        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-        <title>Login</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
-    </head>
+                    // Validação simples para usuário e senha
+                    if (username.value === 'admin' && password.value === 'admin') {
+                        window.location = "/index.html"
+                    } else if (username !== 'admin' && password !== 'admin') {
+                        username.value = '';
+                        password.value = '';
+                        document.getElementById("isenha").style.border = "1px solid red";
+                        document.getElementById("iemail").style.border = "1px solid red";
+                        document.getElementById("isenha").Placeholder = "senha incorreta";
 
-    <body>
-        <section>
-            <div id="login">
-                <div id="logo">
-                    <img src="/img/m.png" alt="">
-                </div>
-                <h1>Login</h1>
-                <input type="email" name="email" id="iemail" placeholder="E-mail" required>
-                <input type="password" name="senha" id="isenha" placeholder="Senha" required>
-                <div id="senha-logado">
-                    <input type="checkbox" name="check-p" id="check">
-                    <label for="check">Manter-me conectado.
-                    </label>
-                    <p>Esqueceu sua <a href="#">senha</a>?</p>
-                </div>
-                <input type="submit" value="Entrar" id="entrar" onclick="entrar()" class="btn-entrar">
-            </div>
-            <div id="imagem">
-            </div>
-            <script>
-
+                    }
+                }
+                                
                 var style = document.createElement('style');
                 style.innerHTML = '::placeholder { color: red; }';
 
@@ -119,7 +101,7 @@
                         senha.style.border = '2.5px solid red';
                         senha.placeholder = "Senha incorreta";
                         document.head.appendChild(style);
-                        mostrarMensagemTemporariaErro('Login não confere !', 2000);
+                        mostrarMensagemTemporariaErro('Senha não confere !', 2000);
 
                     } else if (login.value !== 'admin' && senha.value !== 'admin') {
                         login.value = '';
@@ -136,26 +118,3 @@
                         alert('Login e senha não conferem !')
                     }
                 }
-            </script>
-        </section>
-        <script>
-            function Login() {
-                var username = document.getElementById('iemail');
-                var password = document.getElementById('isenha');
-
-                // Validação simples para usuário e senha
-                if (username.value === 'admin' && password.value === 'admin') {
-                    window.location = "/index.html"
-                } else if (username !== 'admin' && password !== 'admin') {
-                    username.value = '';
-                    password.value = '';
-                    document.getElementById("isenha").style.border = "1px solid red";
-                    document.getElementById("iemail").style.border = "1px solid red";
-                    document.getElementById("isenha").Placeholder = "senha incorreta";
-
-                }
-            }
-        </script>
-    </body>
-
-</html>

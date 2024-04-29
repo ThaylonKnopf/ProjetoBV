@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Requisição de B.O.</title>
         <link rel="stylesheet" href="estilo.css">
+        <link rel="shortcut icon" href="img/m.png" type="image/x-icon">
         <script src="/header-footer/header/header.js"></script>
         <script src="/header-footer/footer/footer.js"></script>
-            
     </head>
 
     <body>
@@ -29,12 +29,25 @@
                     </li>
                 </ul>
                 <p class="paragrafo" id="marg">Para sua segurança seu computador foi identificado.</p>
+                <p id="ipe">Seu IP é: <p id="ip" class="paragrafo"></p></p>
                 <p class="paragrafo"><strong>Você está ciente e aceita as condições acima?</strong></p>
                 <div class="box"><a href="../FatoOcorrido/Ocorrido.html"><input type="button" value="Aceitar"></a></p>
                 </div>
             </section>
+            <a href="/index.html"><button id="btn-voltar">Voltar</button></a>
         </main>
-        <script src="script.js"></script>
+        
+    <script type="text/javascript">
+        var userip;
+      </script>
+  
+      <script type="text/javascript" src="https://l2.io/ip.js?var=userip"></script>
+  
+      <script type="text/javascript">
+        var ip = document.getElementById('ip')
+        ip.innerHTML=(userip)
+
+      </script>
     </body>
 
 </html>

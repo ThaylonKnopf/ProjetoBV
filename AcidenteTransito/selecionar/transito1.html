@@ -6,6 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Requisição de B.O.</title>
         <link rel="stylesheet" href="estilo-fato.css">
+        <link rel="shortcut icon" href="/img/m.png" type="image/x-icon">
+        <script src="/rejeicao/rejeicao.html"></script>
         <script src="script.js"></script>
         <script src="/header-footer/header/header.js"></script>
         <script src="/header-footer/footer/footer.js"></script>
@@ -26,7 +28,7 @@
                 </div>
                 <div class="sol1">
                     <label for="solicitante"><strong>Foi atendido(a) pelos bombeiros de indaial?</strong></label>
-                    <select id="solicitante" required>
+                    <select id="solicitante-indaial" required>
                         <option selected disabled value="">Selecione</option>
                         <option>Sim</option>
                         <option>Não</option>
@@ -35,7 +37,7 @@
             </div>
             <div class="continuar" required>
                 <a href="/FatoOcorrido/Ocorrido.html"><button class="voltar">Voltar</button></a>
-                <a href="../transitoparente/Form.html"><button class="prox" required>Proximo</button></a>
+                <button class="prox" onclick="select_sol()" required>Proximo</button>
             </div>
         </main>
     </body>

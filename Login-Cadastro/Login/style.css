@@ -11,7 +11,7 @@
 body,html{
     width: 100vw;
     height: 100vh;
-    background-image: linear-gradient(#fff312,#000000d5);
+    background-image: linear-gradient(#fff312,#000000d5)
 }
 
 *{
@@ -19,104 +19,170 @@ body,html{
     padding: 0px;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
+    color: white;
+
+    textarea:focus, input:focus, select:focus {
+        outline: 0;
+    }
 }
 
-
-#cad-login{
-    background-color: rgba(0, 0, 0, 0.699);
+section{
     display: flex;
     position: absolute;
-    top: 50%;
     left: 50%;
+    top:50%;
     transform: translate(-50%,-50%);
-    border: 1px solid black;
-    border-radius: 10px;
-    justify-content: center;
+    transition: width .3s, height .3s;
+    transition-timing-function: ease ;
+
 }
 
 #login{
-    margin: auto;
-    padding-left: 100px;
-    padding-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.377);
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    width: 500px;
+    border: 1px solid black;
+    border-radius: 8px 0px 0px 8px;
+    text-align: center;
 
-    #tit{
-        margin-bottom: 20px;
+    #cad{
+        padding-top: 13px;
+        padding-bottom: 10px;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    #cad:hover{
+        text-decoration: underline;
+    }
+
+    #logo{
+        margin-top: 10px;
         img{
             width: 100px;
-            margin-top: 20px;
-        }
-    }
-
-    #log{
-        margin: auto;
-        width: 400px;
-
-        h1,label{
-            padding: 15px;
-            text-align: center;
-        }
-
-        input{
-            border: none;
-            margin-top: 5px;
-            margin-bottom: 10px;
-            width: 100%;
-            padding: 5px;
-            border-radius: 8px;
-            color: black;
-            font-size: 18px;
-        }
-
-        input[type='submit']{
-            font-weight: bolder;
-            font-size: 18px;
-            margin-top: 10px;
             margin-bottom: 20px;
-        }
-
-        input[type='submit']:hover{
-            background-color: rgba(128, 128, 128, 0.438);
-            cursor: pointer;
-            color: white;
-        }
-
-
-        #check{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 40px;
-
-            p{
-                padding-left: 20px;
-            }
-
-        div{
-            align-items: center;
-            width: 200px;
-            input{
-                width: 15px;
-            }
-        }
+        } 
     }
+
+        h1{
+            padding-bottom: 10px;
+        }
+
+    input{
+        width: 80%;
+        border-radius: 8px;
+        border: 1px solid rgb(0, 0, 0);
+        margin: 5px auto;
+        border: 1px solid black;
+        padding: 5px;
+        font-weight: bold;
+        color: black;
+        font-size: 14px;
+    }
+
+    #iemail,#isenha{  
+        margin-top: 10px;
+        height: 7%;
+        color: black;
+        font-weight: bolder;
+    }
+    #iemail,#isenha{  
+        margin-top: 10px;
+        height: 9%;
+        color: black;
+        font-weight: bolder;
+        padding-left: 5px;
+    }
+    .btn-entrar{
+        display: flex;
+        width: 80%;
+        height: 35px;
+        text-decoration: none;
+        justify-content: center;
+    }
+
+    .btn-entrar:hover{
+        cursor: pointer;
+        background-color: black;
+        color: white;
+    }
+
+    #senha-logado{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 13px;
+        margin: 10px;
+ 
+        input{
+            margin-left: 0px;
+            width: 15px;
+        }
+
+        label{
+            margin-right: 100px;
+            padding-left: 4px;
+        }
+
+        a:hover{
+            text-decoration: underline;
+        }
     }
 }
-
-
 
 #imagem{
-
-    border-radius: 0px 10px 10px 0px ;
-    width: 400px;
-    margin-left: 100px;
     background-image: url(/img/fundo-img.jpg);
-    background-position: right center;
+    background-position:right center ;
+    background-position:center right;
     background-size: cover;
-    background-attachment: fixed;
+    width: 400px;
+    height: 420px;
+    border-radius: 0px 8px 8px 0px;
 }
+
+@media screen and (max-width: 880px ) {
+    section{
+        position: absolute;
+        margin: 0px auto;
+        height: 400px;
+        transition: width .3s, height .3s;
+        transition-timing-function: ease ;
+    }
+
+    #login{
+        border-radius: 8px;
+    }
+
+    #imagem{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 499px ) {
+    *{
+        padding: 0px;
+        margin: 0px;
+    }
+    section{
+        width: 100vw;
+
+    }
+
+    #login{
+        width: 100vw;
+        border-radius: 8px;
+    }
+
+    #imagem{
+        display: none;
+    }
+
+    ::-webkit-scrollbar{
+        overflow: hidden;
+    }
+}
+
+
 

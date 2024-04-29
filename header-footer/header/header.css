@@ -18,6 +18,41 @@
     letter-spacing: 1px;
 }
 
+
+header {
+    background-color: #FFF212;
+    height: 140px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    
+}
+
+#menu-div{
+    border-top: 1px solid black;
+    height: 0px;
+    background-color: aqua;
+    margin-top: 12px;
+}
+
+#menu-nav{
+    width: 800px;
+    display: flex;
+    text-align: left;
+    margin: 5px auto 0px auto;
+    padding-left: 50px;
+    justify-content: space-between;
+    font-size: 17px;
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    a:hover{
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}
+
 main {
     height: auto;
 }
@@ -29,12 +64,6 @@ P {
     margin: 15px 0px 15px 0px;
 }
 
-header {
-    background-color: #FFF212;
-    height: 115px;
-    padding-top: 10px;
-    padding-bottom: 0px;
-}
 
 header main {
     background-color: #FFF212;
