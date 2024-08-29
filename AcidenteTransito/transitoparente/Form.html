@@ -16,7 +16,7 @@
         <main class="menuh1">
             <h1>Acidente de transito</h1>
         </main>
-        <form>
+        <form id="meuFormulario">
             <fieldset>
                 <h2>Informações do solicitante:</h2>
                 <div class="campo" required>
@@ -118,13 +118,15 @@
                     <input type="file" name="doc">
                 </div>
             </fieldset>
-    </form>
-        <main class="main-botao">
-            <div class="continuar" required>
-                <a href="../selecionar/transito1.html"><button class="voltar">Voltar</button></a>
-                <a href="/Concluido/Concluido.html"><button class="prox" required>Concluir</button></a>
+            <main class="main-botao">
+                <div class="continuar" >
+                <a href="../selecionar/selecionar.html"><button class="voltar" onclick="desabilitarValidacao()" id="voltar">Voltar</button></a>
+                <a href="/Concluido/Concluido.html"><button class="prox" onclick="habilitarValidacao()">Concluir</button></a>
             </div>
-        </main>
+        </main>     
+      </form>
+      
+      <script src="script.js"></script>
     </body>
 
 </html>

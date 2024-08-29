@@ -21,9 +21,7 @@ function select_sol() {
 
     else if (sel1 === '' && sel2 !== '' ){
         document.getElementById('solicitante').style.border='2px solid red'
-        document.getElementById('solicitante-indaial').style.border='2px solid red'
         document.getElementById('solicitante').style.color='red'
-        document.getElementById('solicitante-indaial').style.color='red'
         alert('Selecione a opção, quem esta solicitando ?')
     }
 
