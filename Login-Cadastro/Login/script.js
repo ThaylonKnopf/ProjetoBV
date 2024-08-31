@@ -77,11 +77,15 @@
                 // Adiciona o estilo ao cabeçalho da página
                 //document.head.appendChild(style);
 
-                function entrar() {
+                document.getElementById('loginForm').addEventListener('submit', function(event) {entrar(event); });
+
+                function entrar(event) {
                     var login = document.getElementById('iemail');
                     var senha = document.getElementById('isenha');
+                                  
 
                     if (login.value == 'admin' && senha.value == 'admin') {
+                        event.preventDefault() 
                         login.style.border = '2.5px solid #49e202a6'
                         senha.style.border = '2.5px solid #49e202a6'
                         mostrarMensagemTemporaria('Logado com sucesso !', 1400);
@@ -91,6 +95,7 @@
 
 
                     } else if (login.value != 'admin' && senha.value == 'admin') {
+                        event.preventDefault() 
                         login.value = ''
                         senha.value = ''
                         login.style.border = '2.5px solid red'
@@ -99,6 +104,7 @@
                         mostrarMensagemTemporariaErro('Login e senha não conferem !', 2000);
 
                     } else if (login.value == 'admin' && senha.value !== 'admin') {
+                        event.preventDefault() 
                         isenha.value = '';
                         login.style.border = '1px solid black';
                         senha.style.border = '2.5px solid red';
@@ -107,6 +113,7 @@
                         mostrarMensagemTemporariaErro('Senha não confere !', 2000);
 
                     } else if (login.value !== 'admin' && senha.value !== 'admin') {
+                        event.preventDefault() 
                         login.value = '';
                         isenha.value = '';
                         login.style.border = '2.5px solid red';
@@ -118,6 +125,7 @@
 
                     }
                     else {
+                        event.preventDefault() 
                         alert('Login e senha não conferem !')
                     }
                 }
